@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, TextInput } from 'react-native';
 import MainLogIn from './components/LogIn/mainLogIn.js';
 import MainTopic from './components/Topics/mainTopic.js';
 import MainChatRoom from './components/ChatRooms/mainChatRoom.js';
-import config from './config.js';
+//import config from './config.js';
 
 export default function App() {
 /*
@@ -22,7 +22,7 @@ export default function App() {
   }
 */
 //      { dashboard === 'Home' && <MainLogIn postToServer={serverCall} /> }
-  const [ dashboard, changeDashboard ] = useState('Home');
+  const [ dashboard, changeDashboard ] = useState('ChatRoom');
 
   return (
     <View style={styles.container}>

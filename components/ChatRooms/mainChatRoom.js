@@ -1,7 +1,8 @@
 
 
 import { React, useState } from 'react';
-import { StyleSheet, View, Button, FlatList, Text } from 'react-native';
+import { StyleSheet, View, Button, FlatList, Text, TextInput } from 'react-native';
+import ChatInput from './chatInput.js';
 
 const MainChatRoom = () => {
 
@@ -31,6 +32,8 @@ const MainChatRoom = () => {
                 <Text>{item.name}</Text>                             
             }
             />
+
+            <ChatInput />
         </View>
     )
 }
@@ -39,6 +42,12 @@ const style = StyleSheet.create({
 
     text:{
         textAlign: 'center'
+    },
+
+    textInput: {
+        //height: 25,
+        width: 200,
+        borderWidth: 1
     },
 
     container:{
