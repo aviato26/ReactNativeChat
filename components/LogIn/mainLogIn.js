@@ -4,9 +4,11 @@ import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 const MainLogIn = (props) => {
 
-    const [userName, setUserName] = useState(null);
-    const [password, setPassword] = useState(null);    
-
+    const [userName, setUserName] = useState("");
+    const [password, setPassword] = useState("");    
+/*
+    <Button title="Submit" onPress={ () => props.postToServer(userName) } />    
+*/
     return(
         <View>
             <Text style={style.text} >Enter User Name:</Text>
@@ -28,7 +30,7 @@ const MainLogIn = (props) => {
             />
             <Text>password: {password}</Text>
 
-            <Button title="Submit" onPress={ () => props.postToServer(userName) } />
+            <Button title="Submit" onPress={() => props.changeDashboard('Topics') }/>
         </View>
     )
 }
