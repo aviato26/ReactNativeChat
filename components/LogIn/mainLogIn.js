@@ -6,13 +6,10 @@ const MainLogIn = (props) => {
 
     const [userName, setUserName] = useState("");
     const [password, setPassword] = useState("");    
-/*
-    <Button title="Submit" onPress={ () => props.postToServer(userName) } />    
-*/
+
     return(
-        <View>
+        <View style={style.container} >
             <Text style={style.text} >Enter User Name:</Text>
-            
             <TextInput 
                 style={style.textInput}
                 onChangeText={ setUserName }
@@ -20,7 +17,7 @@ const MainLogIn = (props) => {
             />
             
             <Text>name: {userName}</Text>
-
+            
             <Text style={style.text} >Enter Password:</Text>
 
             <TextInput 
@@ -30,16 +27,24 @@ const MainLogIn = (props) => {
             />
             <Text>password: {password}</Text>
 
-            <Button title="Submit" onPress={() => props.changeDashboard('Topics') }/>
+            <Button title="Submit" onPress={() => props.serverCall({name: userName, password: password}) }/>
         </View>
     )
 }
 
 const style = StyleSheet.create({
+    container:{
+        width: '80%',
+        margin: 'auto'        
+    },
+
     textInput: {
-        //height: 25,
-        width: 200,
-        borderWidth: 1
+        width: '100%',
+        height: 30,
+        marginTop: 10,
+        marginBottom: 10,
+        borderWidth: 1,
+        margin: 'auto'
     },
 
     text:{
